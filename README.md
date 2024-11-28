@@ -36,7 +36,7 @@
 
 Before using this script, ensure you have the following:
 
-0. **Downlaod Grass Node Android** app from [HERE](https://github.com/Widiskel/grass-mobile-node) or [APK File](https://www.mediafire.com/file/mv3dk6rcx4hqcms/Grass_Mobile_Node.apk/file)
+0. **Download Grass Node Android** app from [HERE](https://github.com/Widiskel/grass-mobile-node) or [APK File](https://www.mediafire.com/file/mv3dk6rcx4hqcms/Grass_Mobile_Node.apk/file)
 
 1. **Python 3.6 or Higher**: Ensure Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
 
@@ -98,3 +98,64 @@ Before using this script, ensure you have the following:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/alienflick/ADB-Grass-Node-Manager.git
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd ADB-Grass-Node-Manager
+   ```
+
+3. **Install the Required Python Libraries** (if not already installed):
+   ```bash
+   pip install colorama opencv-python numpy
+   ```
+
+## Configuration
+
+1. **Edit the Configuration File**:
+   - Open the `config.json` file to modify any configurations, such as interval times or image paths.
+   - Ensure that the device serial numbers match those connected via ADB for proper management.
+
+## Usage
+
+1. **Run the Script**:
+   - Execute the script by running:
+     ```bash
+     python main.py
+     ```
+   - The script will start monitoring and managing the connected devices, performing checks and taking necessary actions every 10 minutes.
+
+2. **Logs and Output**:
+   - The script will display logs on the terminal indicating the status of each device and any actions taken.
+   - The logs are color-coded to enhance readability, with different colors for informational messages, warnings, and errors.
+
+## Template Images
+
+- **Template Matching**: The script uses OpenCV's template matching feature to identify specific buttons in the Grass app.
+- Ensure that:
+  - The images (`template.png` and `stop.png`) are clear and accurately represent the buttons on your device screens.
+  - They are placed in the same directory as the script or the correct paths are provided in the script.
+
+## Logging
+
+- **Colorized Logs**: The script uses the `colorama` library to provide color-coded logs:
+  - **Info**: General information about the script's actions.
+  - **Warning**: Issues that may need attention (e.g., unable to locate a button).
+  - **Error**: Critical issues that stop the script from functioning properly.
+- The logs are printed in the terminal and help in monitoring the progress and debugging any issues.
+
+## Troubleshooting
+
+1. **ADB Not Recognized**: Ensure that ADB is installed correctly and that its path is added to the system's `PATH` variable.
+2. **Device Not Found**: Make sure the device is connected properly and USB Debugging is enabled.
+3. **Template Matching Fails**: Verify that the template images are accurate and have sufficient clarity.
+4. **Permission Issues**: Ensure that your Python script has the necessary permissions to access ADB and device storage.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you would like to add.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
