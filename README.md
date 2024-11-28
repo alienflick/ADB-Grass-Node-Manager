@@ -36,6 +36,8 @@
 
 Before using this script, ensure you have the following:
 
+0. **Downlaod Grass Node Android app from [HERE](https://github.com/Widiskel/grass-mobile-node) or [APK File](https://www.mediafire.com/file/mv3dk6rcx4hqcms/Grass_Mobile_Node.apk/file)
+
 1. **Python 3.6 or Higher**: Ensure Python is installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
 
 2. **ADB (Android Debug Bridge)**:
